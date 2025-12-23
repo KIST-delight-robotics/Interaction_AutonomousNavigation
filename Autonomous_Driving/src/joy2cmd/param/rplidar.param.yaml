@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    channel_type: "serial"
+    serial_port: "/dev/rplidar"
+    serial_baudrate: 256000
+    frame_id: "map"
+    inverted: false
+    angle_compensate: true
+    scan_mode: "Sensitivity"

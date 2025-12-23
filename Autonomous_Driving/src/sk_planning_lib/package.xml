@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sk_planning_lib</name>
+  <version>0.0.1</version>
+  <description>SK Planning Lib</description>
+
+  <maintainer email="kim.soonkyum@kist.re.kr">Soonkyum Kim</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sk_planning_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+  <!--
+  <depend>roslib</depend>
+  <depend>odrive_cpp_sdk</depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>-->
+</package>

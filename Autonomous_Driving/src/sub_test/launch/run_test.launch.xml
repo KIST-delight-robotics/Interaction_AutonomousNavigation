@@ -1,0 +1,16 @@
+<launch>
+  <!-- Run Imu 
+    <node pkg="imu_bno055" exec="bno055_i2c_node" name="imu_node" respawn="true" respawn_delay="2">
+        <param name="device" value="/dev/i2c-4"/>
+        <param name="address" value="40"/> 
+        <param name="frame_id" value="imu"/>
+    </node> -->
+
+  <!-- Sick Laser Scanner -->
+  <node pkg="sick_scan_xd" exec="sick_generic_caller" name="sick_tim_5xx" respawn="false" >
+    <param from="$(find-pkg-share robot_bringup)/config/sick_tim_5xx.yaml" />
+  </node>
+
+  <!-- Run Test -->
+  <node pkg="sub_test" exec="run_test" name="run_test"/>
+</launch>

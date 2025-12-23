@@ -1,0 +1,31 @@
+<launch>
+  <!-- Arguments -->
+
+   <!-- Node -->
+    <node pkg="mrpt_sensor_imu_taobotics"
+          exec="mrpt_sensor_imu_taobotics_node"
+          name="mrpt_sensor_imu_taobotics"
+          output="screen"
+          args="--ros-args --log-level INFO">
+      <param from="$(find-pkg-share mobile2wdd)/param/mrpt_sensor_imu_taobotics.param.yaml" />
+          
+      <!--<param name="process_rate" value="500" type="string"/>
+      <param name="out_rawlog_prefix" value="$(var out_rawlog_prefix)" />
+      <param name="publish_mrpt_obs_topic" value="$(var publish_mrpt_obs_topic)" />
+      <param name="publish_topic" value="$(var publish_topic)" />
+      <param name="sensor_frame_id" value="$(var sensor_frame_id)" />
+      <param name="robot_frame_id" value="$(var robot_frame_id)" />
+      <param name="sensor_label" value="$(var sensor_label)" />
+
+      <param name="serial_port" value="$(var serial_port)" />
+      <param name="sensor_model" value="$(var sensor_model)" />
+
+      <param name="sensor_pose_x" value="$(var sensor_pose_x)" />
+      <param name="sensor_pose_y" value="$(var sensor_pose_y)" />
+      <param name="sensor_pose_z" value="$(var sensor_pose_z)" />
+      <param name="sensor_pose_yaw" value="$(var sensor_pose_yaw)" />
+      <param name="sensor_pose_pitch" value="$(var sensor_pose_pitch)" />
+      <param name="sensor_pose_roll" value="$(var sensor_pose_roll)" />-->
+
+    </node>
+</launch>

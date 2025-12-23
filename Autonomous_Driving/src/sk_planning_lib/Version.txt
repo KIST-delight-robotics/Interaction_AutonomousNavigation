@@ -1,0 +1,23 @@
+=================================================================
+2018.04.26. by Soonkyum Kim
+ - Version.txt created
+=================================================================
+2018.05.10. by Soonkyum Kim
+ - Adding new node to each queue while not considering the optimality w.r.t. h0
+=================================================================
+2018.06.07. by Soonkyum Kim
+ - Update ReMHAs.cpp file
+  . Does not need idx of obstacle any more
+  . Keep finding path by detecting bottle neck point on the path
+=================================================================
+2018.06.20. by Soonkyum Kim
+ - Add build_maze.cpp file
+  . Build a maze-like map with given parameters
+ - Add CSearchData
+  . Record # of expansions and cost to compare performance
+ - Update ReMHAs.cpp file
+  . Keep search pathes while finding bottleNeck points to block path
+
+
+
+

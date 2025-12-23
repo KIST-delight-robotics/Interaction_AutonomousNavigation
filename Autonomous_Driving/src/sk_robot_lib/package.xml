@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>sk_robot_lib</name>
+  <version>0.0.1</version>
+  <description>SK_Mobile Lib</description>
+
+  <maintainer email="kim.soonkyum@kist.re.kr">Soonkyum Kim</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>aruco_opencv_msgs</depend>
+  <depend>dynamixel_sdk</depend>
+
+  <depend>sk_robot_msgs</depend>
+  <depend>sk_planning_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

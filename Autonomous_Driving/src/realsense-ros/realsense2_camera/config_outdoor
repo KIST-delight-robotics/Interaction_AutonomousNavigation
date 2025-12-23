@@ -1,0 +1,33 @@
+# 기본 스트림 설정
+enable_color: true
+rgb_camera.color_profile: 1280x720x15
+enable_depth: true
+align_depth.enable: true
+enable_sync: true
+publish_tf: true
+tf_publish_rate: 1.0
+
+# ===== 컬러 센서 (RGB) =====
+rgb_camera:
+  enable_auto_exposure: true                 # 자동 노출
+  enable_auto_exposure_priority: true        # FPS를 희생해도 노출 확보
+  backlight_compensation: 1                  # 역광 보정
+  enable_auto_white_balance: true            # 자동 화이트밸런스
+  # 수동 WB를 원할 경우 위 false로 하고 white_balance: 4600 같이 추가
+  contrast: 40
+  brightness: 0
+  gamma: 220
+  saturation: 64
+
+# ===== 깊이 센서 (Depth) =====
+depth_module:
+  enable_auto_exposure: true
+  hdr_enabled: true                          # HDR 머지 활성화
+  exposure.1: 7500                           # 첫 노출 (밝은 부분)
+  gain.1: 16
+  exposure.2: 150                            # 두 번째 노출 (어두운 부분)
+  gain.2: 16
+
+hdr_merge:
+  enable: true                               # HDR 머지 필터 ON
+

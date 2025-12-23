@@ -1,0 +1,44 @@
+dwa_command_node:
+  ros__parameters:
+    # ---- 기본 / 코스트 파라미터 ----
+    penalty: 9.5            # 장애물 페널티 상수
+    margin: 1.0             # 안전 여유 [m]
+    dx: 0.0                 # 상위(GPS)가 준 목표 x [m]
+    dy: 0.0                 # 상위(GPS)가 준 목표 y [m]
+
+    # ---- 전방 창(Window) ----
+    ahead_m: 2.0            # 전방 길이 [m]
+    half_width_m: 0.8       # 좌우 반폭 [m]
+    stride: 2               # 샘플링 간격 (셀 스킵)
+
+    # ---- unknown 처리 ----
+    unknown_is_obstacle: false   # true면 -1도 장애물 취급
+
+    # ---- 속도 생성 ----
+    kv: 0.6                 # 거리 -> 전진속도 게인
+    kyaw: 1.0               # 각도 -> 회전속도 게인
+    v_max: 0.7              # 전진 최대 속도 [m/s]
+    v_min: 0.0              # 전진 최소 속도 [m/s]
+    w_max: 0.75             # 회전 최대 속도 [rad/s]
+    vx_fixed: 0.8           # 고정 전진 속도 (지금 로직에서 사용 중)
+
+    # ---- 회전 우선 옵션 ----
+    safety_slowdown: true
+    enable_turn_in_place: true
+    theta_turn_deg: 40.0    # 이 각도 이상이면 제자리 회전
+    allow_backward_target: false
+
+    # ---- 주기 ----
+    timer_dt: 0.1           # 타이머 주기 [s]
+
+    # ---- 토픽 이름 ----
+    occ_topic: "/bev/occupancy_grid"
+    cmd_topic: "/cmd"
+    marker_topic: "/dwa/local_goal_marker"
+
+    # ---- 거리맵 관련 ----
+    dist_method: "bfs_cuda" # 또는 "bf", "bruteforce"
+    dist_max_m: 3.0
+    publish_distgrid: false
+    obstacle_cost: 1.0e9
+

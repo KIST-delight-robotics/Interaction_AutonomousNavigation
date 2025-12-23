@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>joy2cmd</name>
+  <version>0.0.1</version>
+  <description> sub_test </description>
+
+  <maintainer email="kim.soonkyum@kist.re.kr">Soonkyum Kim</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>tf2_ros</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sk_robot_lib</depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+
+</package>

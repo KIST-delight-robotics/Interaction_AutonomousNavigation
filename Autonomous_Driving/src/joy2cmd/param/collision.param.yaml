@@ -1,0 +1,17 @@
+/**:
+  ros__parameters:
+    joy_msg: ""
+    cmd_msg: "/cmd_vel"
+    scan_msg: ""
+    grid_msg: "/bev/occupancy_grid"
+    max_linear_vel : 0.8
+    max_side_vel : 0.0
+    max_angular_vel : 45.0
+    acc: 1.0
+    dt: 0.05
+    #
+    collision_radius: 0.2
+    collision_margin: 0.1
+    resolution_x: 4
+    resolution_y: 0
+    resolution_th: 4

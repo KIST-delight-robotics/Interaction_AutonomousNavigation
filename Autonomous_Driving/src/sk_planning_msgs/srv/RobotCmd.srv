@@ -1,0 +1,7 @@
+int64 cmd
+int64 goal
+float64 goal_x
+float64 goal_y
+float64 duration
+---
+int64 result

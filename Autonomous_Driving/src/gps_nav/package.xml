@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gps_nav</name>
+  <version>0.0.1</version>
+  <description>GPS-based navigation server for Unitree Go2 with RTK and path tracking.</description>
+  <maintainer email="hyebingim5@gmail.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <!-- 빌드 도구 (ament_python 패키지일 때) -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS 2 런타임 의존성 -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>unitree_go</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <!-- nav_utils.py / 다른 코드에서 쓰면 추가 -->
+  <!-- <exec_depend>nav_msgs</exec_depend> -->
+
+  <!-- 테스트용 (기본 템플릿) -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+      <build_type>ament_python</build_type>
+  </export>
+</package>
