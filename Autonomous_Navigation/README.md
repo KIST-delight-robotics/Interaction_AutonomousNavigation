@@ -1,6 +1,6 @@
 # Autonomous Navigation
 
-### 코드 뒤에 _success 파일은 최종적으로 성공했던 파일
+코드 뒤에 _success 파일은 최종적으로 성공했던 파일
 
 ## 1. RealSense Camera Node
 
@@ -18,7 +18,7 @@ Runs a TensorRT-optimized segmentation model to generate real-time class masks.
 
 Execution command:
 
-cd ~/ros2_ws/src/jetson_quantization-master
+cd file_path
 
 python3 demo_trt.py
 
@@ -34,7 +34,10 @@ ros2 run pointcloud_xyzrgb pointcloud_gpu_node
 
 rviz -> frame id : camera_color_optical_frame
 	add topic : "/camera/depth_registered/points"
-
+	
+File : /Interaction_AutonomousNavigation/Autonomous_Navigation/src/pointcloud_xyzrgb/pointcloud_xyzrgb/pointcloud_gpu_xyzrgb.py
+       /Interaction_AutonomousNavigation/Autonomous_Navigation/src/pointcloud_xyzrgb/pointcloud_xyzrgb/point_cloud_xyzrgb.py
+	
 ---
 
 ## 4. BEV Occupancy Grid Node (bev_cuda)
@@ -44,6 +47,8 @@ A package that generates a CUDA-based Bird’s-Eye-View (top-view) occupancy gri
 Execution command:
 
 ros2 launch bev_cuda bev.launch.py
+
+File : /Interaction_AutonomousNavigation/Autonomous_Navigation/src/bev_cuda/bev_cuda/bev_node_success.py
 
 ---
 
@@ -57,6 +62,8 @@ cd ~/ros2_ws/src/gps_nav/gps_nav
 
 ros2 run gps_nav planner_server
 
+File : /Interaction_AutonomousNavigation/Autonomous_Navigation/src/gps_nav/gps_nav/planner_server11_success.py
+       /Interaction_AutonomousNavigation/Autonomous_Navigation/src/gps_nav/gps_nav/nav_utils_success.py
 ---
 
 ## 6. DWA Local Planner (dwa_nav)
@@ -67,6 +74,9 @@ Execution command:
 
 ros2 run dwa_nav dwa_node
 
+File : /Interaction_AutonomousNavigation/Autonomous_Navigation/src/dwa_nav/dwa_nav/distmap_def.py
+       /Interaction_AutonomousNavigation/Autonomous_Navigation/src/dwa_nav/dwa_nav/dwa_node_success.py
+
 ---
 
 ## 7. Go2 Control Bridge Node (unitree_ros2_example)
@@ -76,3 +86,5 @@ A bridge package that converts /cmd messages from the DWA or GPS planner into Un
 Execution command:
 
 ros2 run unitree_ros2_example dwa2go2_node
+
+File : Interaction_AutonomousNavigation/Autonomous_Navigation/src/unitree_ros2/example/src/src/go2/dwa2go2_node.cpp
