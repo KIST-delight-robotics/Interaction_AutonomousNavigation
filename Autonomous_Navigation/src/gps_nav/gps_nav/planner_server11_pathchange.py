@@ -515,7 +515,7 @@ class DestinationSub(Node):
 
     def cb(self, msg: String):
         global DEST_REQUESTED, DEST_LABEL
-        dest = msg.data.strip().lower()
+        dest = msg.data.strip()
         DEST_LABEL = dest
         DEST_REQUESTED = True
         print_info("Dest", f"destination requested: '{dest}'", "yellow")
@@ -549,6 +549,7 @@ def start_ros_subscribers(go2_topic=GO2_TOPIC, cmd_topic=CMD_TOPIC, pub_rate=CMD
             go2_node.destroy_node()
             cmd_node.destroy_node()
             cmdmon_node.destroy_node()
+            dest_node.destroy_node()
             rclpy.shutdown()
     threading.Thread(target=_spin, daemon=True).start()
 
@@ -996,4 +997,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
